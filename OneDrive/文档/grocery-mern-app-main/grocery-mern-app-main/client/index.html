@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siva Honey Farm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #f59e0b;
+        --primary-hover: #d97706;
+        --ring: rgba(245, 158, 11, 0.35);
+        --radius: 0.75rem;
+      }
+      .theme-amber { --primary: #f59e0b; --primary-hover: #d97706; --ring: rgba(245,158,11,0.35); }
+      .theme-forest { --primary: #16a34a; --primary-hover: #15803d; --ring: rgba(22,163,74,0.35); }
+      .theme-rose { --primary: #e11d48; --primary-hover: #be123c; --ring: rgba(225,29,72,0.35); }
+      .theme-ocean { --primary: #0ea5e9; --primary-hover: #0284c7; --ring: rgba(14,165,233,0.35); }
+      .theme-cocoa { --primary: #8b5e34; --primary-hover: #6f4518; --ring: rgba(139,94,52,0.35); }
+      html, body {
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+          Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji",
+          "Segoe UI Emoji";
+      }
+      .bg-primary { background-color: var(--primary); }
+      .text-primary { color: var(--primary); }
+      .btn-primary {
+        background-color: var(--primary);
+        color: #fff;
+        border-radius: var(--radius);
+        transition: background-color .2s ease;
+      }
+      .btn-primary:hover { background-color: var(--primary-hover); }
+      .card {
+        border-radius: var(--radius);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+        background: #fff;
+      }
+      .input {
+        border: 1px solid rgba(0,0,0,0.2);
+        border-radius: var(--radius);
+        padding: 0.6rem 0.75rem;
+        outline: none;
+      }
+      .input:focus { box-shadow: 0 0 0 3px var(--ring); border-color: var(--primary); }
+      @keyframes floaty {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-12px); }
+        100% { transform: translateY(0px); }
+      }
+      .float-slow { animation: floaty 6s ease-in-out infinite; }
+      .float-slower { animation: floaty 9s ease-in-out infinite; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
